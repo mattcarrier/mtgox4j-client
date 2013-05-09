@@ -98,7 +98,7 @@ public class TickerFast implements Serializable {
         this.data = data;
     }
 
-    //@formatter:off
+//@formatter:off
     /*
      * (non-Javadoc)
      * 

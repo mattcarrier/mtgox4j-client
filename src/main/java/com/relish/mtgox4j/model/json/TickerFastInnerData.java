@@ -125,7 +125,7 @@ public class TickerFastInnerData implements Serializable {
         this.currency = currency;
     }
 
-    //@formatter:off
+//@formatter:off
     /*
      * (non-Javadoc)
      * 

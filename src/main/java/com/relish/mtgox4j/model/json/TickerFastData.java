@@ -149,7 +149,7 @@ public class TickerFastData implements Serializable {
         this.now = now;
     }
 
-    //@formatter:off
+//@formatter:off
     /*
      * (non-Javadoc)
      * 

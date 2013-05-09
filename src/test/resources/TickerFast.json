@@ -1,0 +1,48 @@
+{
+  "result": "success",
+  "data": {
+    "last_local": {
+        "value": "97.97038",
+        "value_int": "9797038",
+        "display": "$97.97",
+        "display_short": "$97.97",
+        "currency": "USD"
+    },
+    "last": {
+        "value": "97.97038",
+        "value_int": "9797038",
+        "display": "$97.97",
+        "display_short": "$97.97",
+        "currency": "USD"
+    },
+    "last_orig": {
+        "value": "97.97038",
+        "value_int": "9797038",
+        "display": "$97.97",
+        "display_short": "$97.97",
+        "currency": "USD"
+    },
+    "last_all": {
+        "value": "97.97038",
+        "value_int": "9797038",
+        "display": "$97.97",
+        "display_short": "$97.97",
+        "currency": "USD"
+    },
+    "buy": {
+        "value": "98.53741",
+        "value_int": "9853741",
+        "display": "$98.54",
+        "display_short": "$98.54",
+        "currency": "USD"
+    },
+    "sell": {
+        "value": "98.69847",
+        "value_int": "9869847",
+        "display": "$98.70",
+        "display_short": "$98.70",
+        "currency": "USD"
+    },
+    "now": "1367550485692271"
+  }
+}
