@@ -174,7 +174,7 @@ public class TickerFastData implements Serializable {
      */
     @Override
     public final boolean equals(final Object obj) {
-        if (null == obj || !(obj instanceof TickerFastData)) {
+        if (!(obj instanceof TickerFastData)) {
             return false;
         }
 
