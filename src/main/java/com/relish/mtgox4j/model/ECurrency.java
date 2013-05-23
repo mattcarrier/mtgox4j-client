@@ -21,32 +21,121 @@ import com.google.common.base.Objects;
 
 //@formatter:off
 /**
- * All supported currencies for MtGox.
+ * <H1>All supported currencies for MtGox.</H1>
+ * <br>
+ * <table>
+ * <tr>
+ * <th>Symbol</th>
+ * <th>Name</th>
+ * <th>Divisions</th>
+ * <th>SF</th>
+ * </tr>
+ * <tr>
+ * <td>BTC</td>
+ * <td>Bitcoin</td>
+ * <td>100,000,000</td>
+ * <td>1e8</td>
+ * </tr>
+ * <tr>
+ * <td>USD</td>
+ * <td>US Dollar</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * <tr>
+ * <td>GBP</td>
+ * <td>Great British Pound</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * <tr>
+ * <td>EUR</td>
+ * <td>Euro</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * <tr>
+ * <td>JPY</td>
+ * <td>Japanese Yen</td>
+ * <td>1000</td>
+ * <td>1e3</td>
+ * </tr>
+ * <tr>
+ * <td>AUD</td>
+ * <td>Australian Dollar</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * <tr>
+ * <td>CAD</td>
+ * <td>Canadian Dollar</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * <tr>
+ * <td>CHF</td>
+ * <td>Swiss Franc</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * <tr>
+ * <td>CNY</td>
+ * <td>Chinese Yuan</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * <tr>
+ * <td>DKK</td>
+ * <td>Danish Krone</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * <tr>
+ * <td>HKD</td>
+ * <td>Hong Kong Dollar</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * <tr>
+ * <td>PLN</td>
+ * <td>Polish Zloty</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * <tr>
+ * <td>RUB</td>
+ * <td>Russian Rouble</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * <tr>
+ * <td>SEK</td>
+ * <td>Swedish Krona</td>
+ * <td>1000</td>
+ * <td>1e3</td>
+ * </tr>
+ * <tr>
+ * <td>SGD</td>
+ * <td>Singapore Dollar</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * <tr>
+ * <td>THB</td>
+ * <td>Thai Baht</td>
+ * <td>100,000</td>
+ * <td>1e5</td>
+ * </tr>
+ * </table>
  * 
- * Symbol  Name                Divisions   SF
- * BTC     Bitcoin             100,000,000 1e8
- * USD     US Dollar           100,000     1e5
- * GBP     Great British Pound 100,000     1e5
- * EUR     Euro                100,000     1e5
- * JPY     Japanese Yen        1000        1e3
- * AUD     Australian Dollar   100,000     1e5
- * CAD     Canadian Dollar     100,000     1e5
- * CHF     Swiss Franc         100,000     1e5
- * CNY     Chinese Yuan        100,000     1e5
- * DKK     Danish Krone        100,000     1e5
- * HKD     Hong Kong Dollar    100,000     1e5
- * PLN     Polish Zloty        100,000     1e5
- * RUB     Russian Rouble      100,000     1e5
- * SEK     Swedish Krona       1000        1e3
- * SGD     Singapore Dollar    100,000     1e5
- * THB     Thai Baht           100,000     1e5
- * 
+ * <p>
  * Note the divisions column (the SF column is the same, but gives each in standard form with the number of 0s). 
  * When communicating with the MtGox server, you will often have the opportunity to work with ints or floats. 
  * The float values are deprecated however, and ints are recommended as they are precise. The divisions tells 
  * you what units each of these values is in. So if, for example, you request a bitcoin value, and get a response 
  * of {'value_int': 69655509977}, then the amount in bitcoins is 69655509977/1e8, or 696.55509977 BTC. Of course 
  * there is no requirement that you perform these conversions, but you should be aware of the differences in value.
+ * </p>
  */
 //@formatter:on
 public enum ECurrency {

@@ -17,7 +17,7 @@
  */
 package com.relish.mtgox4j.model.json;
 
-import nl.jqno.equalsverifier.EqualsVerifier;
+import static nl.jqno.equalsverifier.EqualsVerifier.forClass;
 import nl.jqno.equalsverifier.Warning;
 
 import org.junit.Test;
@@ -28,19 +28,18 @@ import org.junit.Test;
 public class EqualsAndHashcodeTest {
     @Test
     public void tickerFast() {
-        EqualsVerifier.forClass(TickerFast.class)
-                .suppress(Warning.NONFINAL_FIELDS).verify();
+        forClass(TickerFast.class).suppress(Warning.NONFINAL_FIELDS).verify();
     }
 
     @Test
     public void tickerFastData() {
-        EqualsVerifier.forClass(TickerFastData.class)
-                .suppress(Warning.NONFINAL_FIELDS).verify();
+        forClass(TickerFastData.class).suppress(Warning.NONFINAL_FIELDS)
+                .verify();
     }
 
     @Test
     public void tickerFastInnerData() {
-        EqualsVerifier.forClass(TickerFastInnerData.class)
-                .suppress(Warning.NONFINAL_FIELDS).verify();
+        forClass(TickerFastInnerData.class).suppress(Warning.NONFINAL_FIELDS)
+                .verify();
     }
 }

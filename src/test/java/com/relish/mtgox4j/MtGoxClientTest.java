@@ -34,6 +34,7 @@ import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
+import com.google.common.base.Optional;
 import com.relish.mtgox4j.model.ECurrency;
 import com.relish.mtgox4j.model.json.TickerFast;
 import com.sun.jersey.api.client.Client;
@@ -86,7 +87,8 @@ public class MtGoxClientTest {
      */
     @Test(expected = NullPointerException.class)
     public void nullCurrency() {
-        mtGoxClient = new MtGoxClient(null);
+        mtGoxClient = new MtGoxClient(null, Optional.<String> absent(),
+                Optional.<String> absent());
     }
 
     /**
@@ -95,7 +97,8 @@ public class MtGoxClientTest {
      */
     @Test
     public void tickerFast() {
-        mtGoxClient = new MtGoxClient(ECurrency.USD);
+        mtGoxClient = new MtGoxClient(ECurrency.USD,
+                Optional.<String> absent(), Optional.<String> absent());
         assertEquals(tFast, mtGoxClient.getTickerFast());
     }
 }
